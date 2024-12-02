@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 
 const BucketTransfer = () => {
   const [bucket1, setBucket1] = useState(["Item 1", "Item 2", "Item 3", "Item 5"]);
@@ -24,10 +25,10 @@ const BucketTransfer = () => {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "20px" }}>
-      <div>
+    <div className="bucket-transfer-container">
+      <div className="bucket">
         <h3>Bucket 1</h3>
-        <ul style={{ listStyleType: "none", padding: 0 }}>
+        <ul>
           {bucket1.map((item) => (
             <li key={item}>
               <label>
@@ -43,7 +44,7 @@ const BucketTransfer = () => {
         </ul>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <div className="button-container">
         <button
           onClick={() =>
             moveSelected(bucket1, bucket2, setBucket1, setBucket2, selectedBucket1, setSelectedBucket1)
@@ -62,9 +63,9 @@ const BucketTransfer = () => {
         <button onClick={() => moveAll(bucket2, bucket1, setBucket2, setBucket1)}>Remove All</button>
       </div>
 
-      <div>
+      <div className="bucket">
         <h3>Bucket 2</h3>
-        <ul style={{ listStyleType: "none", padding: 0 }}>
+        <ul>
           {bucket2.map((item) => (
             <li key={item}>
               <label>

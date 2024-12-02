@@ -1,0 +1,55 @@
+/* Styling for the container that holds the buckets and buttons */
+.bucket-transfer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Styling for each bucket (Bucket 1 and Bucket 2) */
+.bucket {
+  text-align: center;
+}
+
+/* Styling for bucket headings */
+.bucket h3 {
+  margin-bottom: 10px;
+}
+
+/* Styling for the unordered lists within buckets */
+.bucket ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for the list items in buckets */
+.bucket li {
+  margin-bottom: 5px;
+}
+
+/* Styling for the buttons in the middle */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.button-container button:active {
+  background-color: #003f7f;
+}
